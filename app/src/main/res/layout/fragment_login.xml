@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@drawable/gradient_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="100dp"
+                android:layout_gravity="center" />
+
+
+            <TextView
+
+                android:id="@+id/titletxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_marginTop="12dp"
+                android:text="Sales Management"
+
+                android:textSize="23.3sp"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/grillbold"
+                android:gravity="center" />
+
+
+            <TextView
+                android:visibility="gone"
+                android:layout_below="@+id/titletxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16.7sp"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/grillmedium"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:id="@+id/mobileno_layout"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:weightSum="100"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="23.3dp"
+                android:layout_marginLeft="23.3dp"
+                android:layout_marginBottom="26.3dp"
+                android:layout_above="@+id/button"
+                android:orientation="vertical">
+
+
+                <EditText
+
+                    android:digits="0123456789"
+                    android:id="@+id/mobile"
+                    android:layout_weight="80"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#8f909e"
+                    android:background="@drawable/gray_rect"
+                    android:hint="Enter Mobile number"
+                    android:fontFamily="@font/robo_regular"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    />
+
+
+                <EditText
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/password"
+                    android:layout_weight="80"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#8f909e"
+                    android:hint="Password"
+                    android:fontFamily="@font/robo_regular"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:layout_gravity="center"
+                    android:maxLength="10"
+                    android:padding="15dp"
+                    android:background="@drawable/gray_rect" />
+
+
+            </LinearLayout>
+
+
+
+            <ProgressBar
+                android:visibility="gone"
+                android:id="@+id/progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <Button
+                android:id="@+id/submit"
+                android:layout_above="@+id/bottom_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_btn"
+                android:textColor="@color/white"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textSize="16.7sp"
+                android:fontFamily="@font/grillmedium"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="23.3dp"
+                android:layout_marginRight="23.3dp" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_above="@+id/bottom_txt"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/gradient_btn"
+                android:textColor="@color/white"
+                android:text="Continue"
+                android:textAllCaps="false"
+                android:textSize="16.7sp"
+                android:fontFamily="@font/grillmedium"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="23.3dp"
+                android:layout_marginRight="23.3dp" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.ankurupadhyay.salemanagement.data.Variants"/>
+        <variable
+            name="model"
+            type="Variants" />
+        <variable
+            name="callback"
+            type="com.ankurupadhyay.salemanagement.ui.AddVariantsFragment" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/name"
+            android:hint="Name"
+            android:text="@{model.name}"
+            android:inputType="textCapWords"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:hint="Description"
+            android:text="@{model.description}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/pPrice"
+            android:hint="Purchasing Price"
+            android:text="@{String.valueOf(model.acPrice)}"
+            android:inputType="numberDecimal"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/price"
+                android:hint="Selling Price"
+                android:text="@{String.valueOf(model.sellingPrice)}"
+                android:inputType="numberDecimal"
+                app:layout_constraintTop_toBottomOf="@+id/pPrice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+            <EditText
+                android:id="@+id/quan"
+                android:hint="Quantity"
+                android:text="@{String.valueOf(model.quantity)}"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@+id/price"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:id="@+id/submit"
+            android:text="Submit"
+            android:onClick="@{()->callback.onSubmitClick()}"
+            app:layout_constraintTop_toBottomOf="@+id/quan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

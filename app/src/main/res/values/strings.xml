@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SaleManagement</string>
+    <string name="price">₹</string>
+    <string name="del_product_error">Do you really want to delete product</string>
+    <string name="del_variant_error">Do you really want to delete product variant</string>
+    <string name="out_of_stock_error">Desired quantity not available</string>
+    <string name="order_success_replace">Successfully add order in replace</string>
+</resources>

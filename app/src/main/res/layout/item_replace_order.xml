@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.ankurupadhyay.salemanagement.data.ReplaceOrder"/>
+        <import type="android.view.View"/>
+        <variable
+            name="model"
+            type="ReplaceOrder" />
+
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+
+        android:layout_marginBottom="16dp"
+        android:id="@+id/swapLayout"
+        android:background="@drawable/rectangle_gray_border_home"
+        android:orientation="horizontal">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="13dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginRight="9dp">
+
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_heavy"
+                    tools:text="Name : Ankur"
+                    android:textColor="#303030"
+                    android:textSize="15sp"
+                    android:layout_marginTop="3dp"
+
+                    />
+
+
+
+
+
+            </LinearLayout>
+
+            <TextView
+
+                android:id="@+id/txtContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/poppins_bold"
+                tools:text="Contact No : 9001782670"
+                android:textAlignment="textStart"
+                android:textColor="@color/subtxt_gray"
+                android:textSize="12sp" />
+
+            <TextView
+
+                android:id="@+id/txtPaymentMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/poppins_bold"
+                tools:text="Payment Method : Online"
+                android:textAlignment="textStart"
+                android:textColor="@color/subtxt_gray"
+                android:textSize="12sp" />
+
+            <TextView
+
+                android:layout_marginRight="10dp"
+                android:id="@+id/txtTotalItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/poppins_bold"
+                tools:text="Total Items : 3"
+                android:textColor="@color/subtxt_gray"
+                android:textSize="12sp" />
+
+
+            <TextView
+
+                android:id="@+id/txtOrderDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/poppins_bold"
+                tools:text="Date : 26-01-2023"
+                android:textAlignment="textStart"
+                android:textColor="@color/subtxt_gray"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/txtAllItems"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="@color/subtxt_gray"
+                tools:text="J.k Tyers X 3 = 300"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="9dp"
+                android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/sf_pro_display_semibold"
+                    tools:text="Discount : 50rs"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txtGrandTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/sf_pro_display_semibold"
+                    tools:text="Grand Total : 500rs"
+                    android:text="Grand Total : 500rs"
+                    android:textColor="@color/green"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

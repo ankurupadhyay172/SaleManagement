@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_allProductsFragment"
+            app:destination="@id/allProductsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allSaleProductsFragment"
+            app:destination="@id/allSaleProductsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_analyticsFragment"
+            app:destination="@id/analyticsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_allReplaceOrdersFragment"
+            app:destination="@id/allReplaceOrdersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allProductsFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.AllProductsFragment"
+        android:label="All Products"
+        tools:layout="@layout/fragment_all_products">
+        <action
+            android:id="@+id/action_allProductsFragment_to_createProduct"
+            app:destination="@id/createProduct" />
+        <action
+            android:id="@+id/action_allProductsFragment_to_allVariantsFragment"
+            app:destination="@id/allVariantsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/createProduct"
+        android:name="com.ankurupadhyay.salemanagement.ui.CreateProduct"
+        android:label="CreateProduct"
+        tools:layout="@layout/fragment_create_product">
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="na" />
+    </fragment>
+    <fragment
+        android:id="@+id/allSaleProductsFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.AllSaleProductsFragment"
+        android:label="Sale Products"
+        tools:layout="@layout/fragment_all_sale_products">
+        <action
+            android:id="@+id/action_allSaleProductsFragment_to_cartFragment"
+            app:destination="@id/cartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.CartFragment"
+        android:label="Cart"
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_checkoutFragment"
+            app:destination="@id/checkoutFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_addDiscountFragment"
+            app:destination="@id/addDiscountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/checkoutFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.CheckoutFragment"
+        android:label="Checkout"
+        tools:layout="@layout/fragment_checkout">
+        <action
+            android:id="@+id/action_checkoutFragment_to_orderCompleteFragment"
+            app:destination="@id/orderCompleteFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderCompleteFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.OrderCompleteFragment"
+        android:label="Order Complete"
+        tools:layout="@layout/fragment_order_complete"/>
+    <fragment
+        android:id="@+id/analyticsFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.AnalyticsFragment"
+        android:label="Analytics"
+        tools:layout="@layout/fragment_analytics"/>
+    <fragment
+        android:id="@+id/addDiscountFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.AddDiscountFragment"
+        android:label="AddDiscountFragment"
+        tools:layout="@layout/fragment_discount">
+        <argument
+            android:name="discount"
+            app:argType="long" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/addVariantsFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.AddVariantsFragment"
+        android:label="AddVariantsFragment"
+        tools:layout="@layout/fragment_create_varient">
+        <argument
+            android:name="pid"
+            app:argType="string"
+            android:defaultValue="na" />
+        <argument
+            android:name="vid"
+            app:argType="string"
+            android:defaultValue="na" />
+    </fragment>
+    <fragment
+        android:id="@+id/allVariantsFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.AllVariantsFragment"
+        android:label="{name}"
+        tools:layout="@layout/fragment_all_products">
+        <action
+            android:id="@+id/action_allVariantsFragment_to_addVariantsFragment"
+            app:destination="@id/addVariantsFragment" />
+        <argument
+            android:name="pid"
+            app:argType="string" />
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="Variants" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashScreenFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_splashScreenFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/allReplaceOrdersFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.replacement.AllReplaceOrdersFragment"
+        android:label="Replaced Orders" >
+        <action
+            android:id="@+id/action_allReplaceOrdersFragment_to_addReplacementFragment"
+            app:destination="@id/addReplacementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addReplacementFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.replacement.AddReplacementFragment"
+        android:label="Add Replacement"
+        tools:layout="@layout/fragment_all_sale_products">
+        <action
+            android:id="@+id/action_addReplacementFragment_to_replacementCartFragment"
+            app:destination="@id/replacementCartFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/replacementCartFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.replacement.ReplacementCartFragment"
+        android:label="ReplacementCartFragment"
+        tools:layout="@layout/fragment_replacement_cart">
+        <action
+            android:id="@+id/action_replacementCartFragment_to_replacementCheckoutFragment"
+            app:destination="@id/replacementCheckoutFragment"
+            app:popUpTo="@id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/replacementCheckoutFragment"
+        android:name="com.ankurupadhyay.salemanagement.ui.replacement.ReplacementCheckoutFragment"
+        android:label="Checkout Replacement"
+        tools:layout="@layout/fragment_replacement_checkout">
+        <action
+            android:id="@+id/action_replacementCheckoutFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+</navigation>
